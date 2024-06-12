@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.js' integrity='sha512-vHNHepeQWwAggJlhEk932jRS5sNdn/Nn4F+w4TpXW5dA+04qnd3e7YpfXo6auWhFG6z3FVhmScG4ovtF+qYeZw==' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-ajax-uploader/2.6.7/SimpleAjaxUploader.min.js" integrity="sha512-sF1OQUX4620btxfaKLxsFeu/euV3FcPyH+uST3mdEjc8vW8R4z1xNiZhcG7wcZQbFkgFhiiBoAyYNMCL3jufPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="fileCountWidget">
+        Number of Files: <span id="fileCount">Loading...</span>
+    </div>
+    <div class="wrap">
+
+<div class="conteinerTop">
+    <div class="coneinerTopLeft">
+
+    </div>
+    <div class="coneinerTopCenter">
+<span class="highlight">
+        F</span>ile <span class="highlight">W </span>hiz
+   
+    </div>
+    <div class="coneinerTopRight">
+
+       
+
+
+
+        <label for="themeSwitch" class="switch">
+            <input id="themeSwitch" type="checkbox" checked onchange="changeTheme(this.checked)">
+            <span class="slider round"></span>
+        </label>
+
+
+        <select id="language_select">
+            <option value="en">En</option>
+            <option value="uk">Укр</option>
+            <option value="de">De</option>
+            <option value="au">au</option>
+        </select>
+    </div>
+
+    </div>
+
+        <div class="conteiner">
+        <form id="uploadForm">
+            <div class="uploadTop">
+                <div id="dropArea" class="drop-area">
+                    
+                    <input class="fileInput" type="file" id="fileInput" required>
+                    <label for="fileInput"><i class="fa-brands fa-dropbox fa-2xl"></i></label>
+                </div>
+            </div>
+            
+        <div class="uploadCenter">
+            <h2 class="translate" data-key="Upload a File">Upload a File</h2>
+        </div>
+        <div class="uploadBottom">
+            <button class="uploadBtm i-copy-btn translate" type="button"  data-key="Upload File">Upload file</button>
+            <p id="message" class="i-copy-target box translate" data-key="Key">Key</p>
+            <i id="copy" class="fa-solid fa-copy fa-2xl i-copy"></i>
+        </div>
+        
+        </form>
+
+       
+
+        <form id="downloadForm">
+
+            <div class="downloadTop">
+                <i class="fa-solid fa-box fa-2xl"></i>
+            </div>
+
+            <div class="downloadCenter">
+                <h2 class="translate" data-key="Download a File">Download a File</h2>
+            </div>
+
+
+
+            <div class="downloadBottom">
+
+
+            <input type="text" id="codeInput" placeholder="X X X X X X" maxlength="6">
+            <button class="downloadBtm translate" type="submit" data-key="Download">Download</button>
+
+
+        </div>
+        </form>
+    </div>
+        
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
